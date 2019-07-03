@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Dashboard | Lab.Kom | SIAKAD SMK Telkom Malang</title>
+
+
+
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap-select/css/bootstrap-select.css"
+        rel="stylesheet">
+    <link rel="icon" href="https://siswa.smktelkom-mlg.sch.id/assets/favicon.ico" type="image/x-icon">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/node-waves/waves.css" rel="stylesheet">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/animate-css/animate.css" rel="stylesheet">
+    <link
+        href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css"
+        rel="stylesheet">
+
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/css/materialize.css" rel="stylesheet">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/css/themes/all-themes.css" rel="stylesheet">
+    <link
+        href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+        rel="stylesheet">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/calendar/fullcalendar.css" rel="stylesheet">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/calendar/fullcalendar.print.css" rel="stylesheet"
+        media="print">
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/calendar/moment.min.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/calendar/jquery.min.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/calendar/fullcalendar.min.js"></script>
+    <link
+        href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+        rel="stylesheet">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/css/style.css" rel="stylesheet">
+    <link href="https://siswa.smktelkom-mlg.sch.id/assets/style2.css" rel="stylesheet">
+
+    <style type="text/css">
+        .kamera {
+            position: absolute;
+            opacity: 0;
+            transition: all .4s ease-in;
+            z-index: 11;
+        }
+
+        .photo:hover .kamera {
+            opacity: 100;
+            cursor: pointer;
+            transition: all .4s ease-out;
+            z-index: 10;
+        }
+
+        .loading3 {
+            position: absolute;
+            display: none;
+            transition: all .4s ease-in;
+            z-index: 10;
+        }
+
+        .pesannya {
+            top: 30px;
+            left: 20px;
+            color: red;
+            background: yellow;
+            text-align: center;
+            border-radius: 30px;
+            display: block;
+            position: absolute;
+            opacity: 100;
+            transition: all .4s ease-in;
+            z-index: 12;
+        }
+    </style>
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="#">LABKOM | SMK TELKOM MALANG</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown pull-right">
+                        <a href="javascript:void(0);" class="btn btn-default" style="color: #222;">
+                            X-RPL1</a>
+                        <!-- <ul class="dropdown-menu pull-right">
+                            <li></li>
+                        </ul> -->
+                    </li>
+                    <li class="dropdown pull-right">
+                        <a href="javascript:void(0);" class="btn btn-default" style="color: #222;">
+                            2018/2019</a>
+                        <!-- <ul class="dropdown-menu pull-right">
+                            <li></li>
+                        </ul> -->
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image photo" style="position: relative">
+                    <div class="pesannya"></div>
+                    <img class="loading3" src="https://siswa.smktelkom-mlg.sch.id/assets/loading3.gif" width="48"
+                        height="48">
+                    <form id="form_upload_profil" method="post" enctype="multipart/form-data">
+                        <input name="upload_profil" required class="form-control" id="upload_profil" type="file"
+                            accept="image/*" style='display: none;'>
+                    </form>
+                    <img class="kamera" name="kamera" src="https://siswa.smktelkom-mlg.sch.id/assets/kamera.png"
+                        width="48" height="48">
+                    <img src="https://siswa.smktelkom-mlg.sch.id/assets/images/foto_siswa/1._Achmad_Syeh_Hasimy,_MD_1.jpg"
+                        width="48" height="48" alt="User" />
+
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= datalogin.fullname %> </div>
+                    <div class="email"><%= datalogin.email_pemesan %></div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="https://siswa.smktelkom-mlg.sch.id/profil"><i
+                                        class="material-icons">person</i>Profil Saya</a>
+                            </li>
+                            <li><a href="#ubah_kata_sandi" data-toggle="modal"><i class="material-icons">vpn_key</i>Ubah
+                                    Password</a>
+                            </li>
+                            <li><a href="https://siswa.smktelkom-mlg.sch.id/login/logout"><i
+                                        class="material-icons">input</i>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <!-- ABSESNSI siswa -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header"></li>
+                    <li class="active">
+                        <a href="/home">
+                            <i class="material-icons">home</i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            <i class="material-icons">person</i>
+                            <span>Profil Aplikasi</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/lab-pesan">
+                            <i class="material-icons">laptop_chromebook</i>
+                            <span>Laboratorium Komputer</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            <i class="material-icons">format_list_numbered</i>
+                            <span>Daftar Pemesan</span>
+                        </a>
+                    </li>
+                    <!-- <li class="">
+                        <a href="#">
+                            <span>Data Pelanggaran</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2019 <a href="javascript:void(0);">MOKLET</a>.
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+    </section>
+
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2 class="text-center">Terima kasih telah memesan!</h2>
+            </div>
+
+            <div class="card">
+                <div class="header border_bawah">
+                    <h2>Informasi Pemesanan:</h2>
+                </div>
+                <div class="body">
+                    <ol style="font-size:18px">
+                        <li>Nama: <%= users.nama %></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="btn btn-block bg-red waves-effect"
+                    style="display: inline-block; vertical-align: middle; margin: 10px 0;" href="home">
+                    Kembali ke Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Jquery Core Js -->
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap/js/bootstrap.js"></script>
+
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/node-waves/waves.js"></script>
+
+
+
+
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/momentjs/moment.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+
+
+
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/js/admin.js"></script>
+    <script
+        src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+    <script type="text/javascript">
+
+
+
+        $('.kamera').on('click', function () {
+            $('#upload_profil').click(); return false;
+        });
+
+        $("#upload_profil").change(function () {
+            eksekusi(this);
+        });
+        function eksekusi(input) {
+
+
+
+            if (input.files && input.files[0]) {
+                var fileReader = new FileReader();
+                var imageFile = input.files[0];
+                if (imageFile.size > 10000000) {
+                    alert("your file is too large");
+                    $("#upload_profil").val('');
+                }
+                else if (imageFile.type == "image/png" || imageFile.type == "image/jpeg" || imageFile.type == "image/jpg") {
+                    fileReader.readAsDataURL(imageFile);
+                    fileReader.onload = function (e) {
+                        var formData = new FormData($("#form_upload_profil")[0]);
+                        //var formData="aaaa";
+                        $.ajax({
+                            url: "https://siswa.smktelkom-mlg.sch.id/presnow/sim",
+                            type: "POST",
+                            dataType: "json",
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+                            beforeSend: function () {
+                                $(".loading3").css('display', 'block');
+                                $(".loading3").css('transition', 'all .4s ease-in');
+                            },
+                            success: function (hasil) {
+                                $(".loading3").css('display', 'none');
+                                $(".loading3").css('transition', 'all .4s ease-in');
+                                if (hasil['status'] == 1) {
+                                    $(".pesannya").css('display', 'block');
+                                    $(".pesannya").html(hasil['pesan']);
+                                    $(".pesannya").css('transition', 'all .4s ease-in');
+                                    setTimeout(function () {
+                                        $(".pesannya").html(hasil['pesan']);
+                                        $(".pesannya").css('display', 'none');
+                                        $(".pesannya").css('transition', 'all .4s ease-in');
+                                        location.reload();
+                                    }, 2000);
+                                }
+                            }
+                        });
+                    }
+                }
+                else {
+                    alert("your file is not image");
+                    $("#upload_profil").val('');
+
+                }
+            }
+        }
+
+        $('#1').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            time: false, clearButton: true
+        });
+        $('#0').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            time: false, clearButton: true
+        }).on('change', function (e, date) {
+            $('#1').bootstrapMaterialDatePicker('setMinDate', date);
+        });
+
+
+
+
+        $("#form_validation_pass").submit(function () {
+            $.ajax({
+                type: "POST",
+                data: $('#form_validation_pass').serialize(),
+                url: "https://siswa.smktelkom-mlg.sch.id/welcome/set_ulang_kata_sandi",
+                success: function (r) {
+                    if (r.log.status == 0) {
+                        showNotification('bg-red', r.log.keterangan);
+                        location.reload();
+
+                    } else {
+                        showNotification('bg-green', r.log.keterangan);
+                        location.reload();
+
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

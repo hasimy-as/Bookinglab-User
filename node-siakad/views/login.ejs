@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <title>Login | SIAKAD | SMK Telkom Malang</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/node-waves/waves.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://siswa.smktelkom-mlg.sch.id/assets/plugins/animate-css/animate.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://siswa.smktelkom-mlg.sch.id/assets/css/style.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <body class="login-page">
+    <div class="login-box">
+      <div class="card1">
+        <div class="ok">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo">
+                <a href="javascript:void(0);">Si<span>AKAD</span></a>
+                <small
+                  >Sistem Informasi Akademik Siswa<br />SMK TELKOM MALANG</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="body">
+          <form method="POST" action="auth">
+            <div class="msg">Silahkan masukan Email dan kata sandi.</div>
+            <p id="error" style="color:red"></p>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">email</i>
+              </span>
+              <div class="form-line">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="email"
+                  placeholder="EMAIL"
+                  required
+                  autofocus
+                  email
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">lock</i>
+              </span>
+              <div class="form-line">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="Kata Sandi"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <input
+                  class="btn btn-block bg-red waves-effect"
+                  type="submit"
+                  value="MASUK"
+                />
+              </div>
+
+              <div class="col-xs-12">
+                <a href="#lppas" data-toggle="modal" class="btn"
+                  >Lupa Password</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="lppas"
+      tabindex="-1"
+      role="dialog"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="largeModalLabel">LUPA PASSWORD</h4>
+          </div>
+          <form id="lupapass">
+            <div class="modal-body">
+              <div class="form-group form-float">
+                <div class="form-line">
+                  <p class="form-label">Isikan Email Sekolah Anda</p>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control show-tick"
+                    required
+                  />
+                </div>
+                <small id="ket"></small>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input
+                type="submit"
+                class="btn btn-link waves-effect"
+                value="Reset"
+              />
+              <button
+                type="button"
+                class="btn btn-link waves-effect"
+                data-dismiss="modal"
+              >
+                Tutup
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- Custom Js -->
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/js/admin.js"></script>
+    <script src="https://siswa.smktelkom-mlg.sch.id/assets/js/pages/examples/sign-in.js"></script>
+  </body>
+</html>
