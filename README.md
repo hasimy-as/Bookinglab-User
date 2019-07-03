@@ -23,7 +23,7 @@ Ketiga, ketik perintah (npm start) untuk menginisialisasi aplikasi.
 
 ```
 
-## Lisenssi
+## Lisensi
 ### Versi lama aplikasi ini terlisensikan dengan Lisensi ISC.
 
 Happy coding!
