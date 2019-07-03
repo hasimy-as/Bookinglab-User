@@ -1,4 +1,4 @@
-## Bookinglab-User
+# Bookinglab-User
 
 Bookinglab-User adalah sebuah website intra-sekolah [SMK Telkom Malang](https://smktelkom-mlg.sch.id/) yang digunakan oleh warga sekolah supaya dapat memudahkan mereka untuk memesan Laboratorium Komputer yang tersedia di SMK Telkom Malang.
 
