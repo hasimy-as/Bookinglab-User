@@ -12,10 +12,11 @@ Ini merupakan versi lama aplikasi Bookinglab-User, dengan menggunakan dashboard 
 
 ### Penggunaan
 
+NB: Silahkan download folder node-siakad untuk versi lama aplikasi.
 Ikuti instruksi dibawah untuk membuat aplikasi bekerja:
 
 ```sh
-Pertama, unduh atau klon aplikasi di <repository> ini.
+Pertama, unduh atau klon aplikasi (folder node-siakad) di <repository> ini.
 
 Kedua, silahkan unduh <dependencies> yang diperlukan aplikasi dengan perintah (npm install --save) di CLI anda.
 
