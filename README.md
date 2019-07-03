@@ -4,12 +4,11 @@ Bookinglab-User adalah sebuah website intra-sekolah [SMK Telkom Malang](https://
 
 ## Status Projek
 
-[![Lisensi GitHub](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/hasimy-as/Bookinglab-User/master/LICENSE)
 [![Versi npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/)
-[![Status dependencies](https://img.shields.io/hackage-deps/v/lens.svg)](https://github.com/hasimy-as/Bookinglab-User)
+[![Status dependencies](https://img.shields.io/hackage-deps/v/lens.svg)](https://github.com/hasimy-as/Bookinglab-User/tree/siakad-lama)
 
-## Versi 1.0.0
-Versi bisa saja berubah bilamana ada update projek.
+## Versi 0.0.9b
+Ini merupakan versi lama aplikasi Bookinglab-User, dengan menggunakan dashboard Sistem Informasi Akademis [SMK Telkom Malang](https://smktelkom-mlg.sch.id/)
 
 ### Penggunaan
 
@@ -24,7 +23,8 @@ Ketiga, ketik perintah (npm start) untuk menginisialisasi aplikasi.
 
 ```
 
-## Dilisensikan di bawah Lisensi Apache-2.0
+## Lisenssi
+### Versi lama aplikasi ini terlisensikan dengan Lisensi ISC.
 
 Happy coding!
 ~Hasimy
