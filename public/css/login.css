@@ -1,0 +1,9 @@
+.grid {
+    height: 102vh;
+    background: url(../img/profile-menu.png) no-repeat center;
+    background-size: cover;
+}
+
+.column {
+    max-width: 450px;
+}

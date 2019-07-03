@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Laboratorium Komputer</title>
+  <link href="/public/css/business-casual.min.css" rel="stylesheet">
+  <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <script src="/public/js/jquery.min.js"></script>
+  <script src="/public/js/bootstrap.bundle.min.js"></script>
+
+  <% include extensions/hello %>
+  <% include extensions/navbar/navbar_jadwal %>
+
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading mb-5">
+              <span class="section-heading-upper">Laboratorium Komputer</span>
+              <span class="section-heading-lower">Jadwal Buka</span>
+            </h2>
+            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Minggu
+                <span class="ml-auto">Tutup</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Senin
+                <span class="ml-auto">7:00 sampai 15:30</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Selasa
+                <span class="ml-auto">7:00 sampai 15:30</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Rabu
+                <span class="ml-auto">7:00 sampai 15:30</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Kamis
+                <span class="ml-auto">7:00 sampai 15:30</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Jum'at
+                <span class="ml-auto">7:00 sampai 15:30</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Sabtu
+                <span class="ml-auto">Tutup</span>
+              </li>
+            </ul>
+            <p class="address mb-5">
+              <em>
+                <strong>Jln. Danau Ranau, No. 1</strong>
+                <br>
+                Sawojajar, Kota Malang
+              </em>
+            </p>
+            <p class="mb-0">
+              <small>
+                <em>Kontak Kami</em>
+              </small>
+              <br>
+              +62 812-3456-7890<br>achmad_syeh_27rpl@student.smktelkom-mlg.sch.id
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section about-heading">
+    <div class="container">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">"Membuat pesan lab jadi ez"</span>
+                <span class="section-heading-lower">Profil aplikasi</span>
+              </h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti obcaecati quidem odio sit, molestiae
+                vero corrupti provident veniam nihil sapiente ipsum fugiat, ab distinctio totam. Adipisci explicabo unde
+                delectus ipsam.</p>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aliquam velit, corrupti
+                consequuntur labore eius, tenetur suscipit magnam ipsum accusantium rerum natus laudantium voluptates
+                totam quisquam recusandae alias, illo in.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <% include extensions/footer %>
+
+</body>
+
+<script>
+  $('.list-hours li').eq(new Date().getDay()).addClass('today');
+</script>
+
+</html>
