@@ -8,11 +8,14 @@ const express = require('express'),
     port = 5000;
 
 app.set('view engine', 'ejs');
+app.set(express.static('public'));
 app.use('/public', express.static('public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(
+    bodyParser.urlencoded({
+        extended: true
+    })
+);
 app.use(
     session({
         secret: 'secret',
@@ -23,14 +26,13 @@ app.use(
 
 //rendernya
 app.get('/', (req, res) => {
-    res.render('login')
+    res.render('login');
 });
 
 app.post('/authlogin', (req, res) => {
     var email = req.body.email;
     var password = req.body.password;
-    const sql =
-        'SELECT * FROM user WHERE email_user = ? AND password = ?';
+    const sql = 'SELECT * FROM user WHERE email_user = ? AND password = ?';
     if (email && password) {
         db.query(sql, [email, password], function (err, rows) {
             if (err) throw err;
@@ -69,8 +71,8 @@ app.get('/jadwal', (req, res) => {
 
 app.get('/logout', (req, res) => {
     if (req.session.loggedin) {
-        res.redirect('/'),
-            req.session.loggedin = false;
+        req.session.loggedin = false;
+        res.redirect('/');
     }
     res.end();
 });
@@ -80,11 +82,7 @@ app.get('/pelanggaran', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.json({
-        message: 'NOT FOUND',
-        code: 403,
-        err: 'Page Not Found'
-    });
+    res.render('404');
 });
 
 //declare port
