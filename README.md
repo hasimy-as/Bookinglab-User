@@ -21,7 +21,7 @@ Pertama, unduh atau klon aplikasi di <repository> ini.
 
 Kedua, silahkan unduh <dependencies> yang diperlukan aplikasi dengan perintah (npm install --save) di CLI anda.
 
-Ketiga, ketik perintah (npm start) untuk menginisialisasi aplikasi.
+Ketiga, ketik perintah (npm start) untuk menginisialisasikan aplikasi.
 
 ```
 
