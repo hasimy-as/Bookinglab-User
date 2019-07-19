@@ -8,9 +8,11 @@ Bookinglab-User adalah sebuah website intra-sekolah [SMK Telkom Malang](https://
 [![Versi npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/)
 [![Status dependencies](https://img.shields.io/hackage-deps/v/lens.svg)](https://github.com/hasimy-as/Bookinglab-User)
 
-## Versi 1.0.0
+## Versi 1.0.0a
 
 Versi bisa saja berubah bilamana ada update projek.
+Perubahan:
+-Metode Logout diperbaharui.
 
 # Penggunaan
 
