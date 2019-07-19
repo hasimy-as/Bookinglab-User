@@ -10,9 +10,7 @@ Bookinglab-User adalah sebuah website intra-sekolah [SMK Telkom Malang](https://
 
 ## Versi 1.0.0a
 
-Versi bisa saja berubah bilamana ada update projek.
-Perubahan:
--Metode Logout diperbaharui.
+Perubahan: Metode Logout diperbaharui.
 
 # Penggunaan
 
