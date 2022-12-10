@@ -15,7 +15,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-myconnection": "^1.0.4",
     "express-session": "^1.15.6",
     "jquery": "^3.4.1",
